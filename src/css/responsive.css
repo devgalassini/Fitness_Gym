@@ -1,0 +1,213 @@
+@media(max-width:1024px){
+    html{
+        font-size: 80%;
+    }
+
+    .secao-inicial,
+    .secao-de-servicos,
+    .secao-de-registro{
+        & img,
+        & .divisao-imagem{
+            display: none;
+        }
+    }
+
+    main,
+    .secao-de-servicos{
+        background-image: none;
+    }
+    
+    main{
+        height: 93.8vh;
+        & .cabecalho{
+            & nav{
+                & ul{
+                    & li{
+                        &::before{
+                            height: 16%;
+                            box-shadow: 0px 2px var(--vermelho-padrao);
+                        }
+                        &:last-child::before{
+                            width: 100%;
+                        }
+                        & .btn{
+                            padding: 0;
+                            clip-path: none;
+                            background-color: transparent;
+                            transition: all 0s;
+                            &:hover{
+                                opacity: 100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .secao-inicial{
+            height: 73.8vh;
+            justify-content: center;
+            & .area-de-introducao{
+                margin-top: 7.5vh;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 20px;
+                & h1{
+                    margin-bottom: 0;
+                    line-height: 7rem;
+                    white-space: normal;
+                }
+                & p{
+                    padding: 0 1rem;
+                }
+                & .btn{
+                    margin-top: 17px;
+                    clip-path: none;
+                    border-radius: 1rem 10rem / 12rem 10rem;
+                }
+            }
+        }
+    }
+
+    & .secao-de-equipamentos{
+        min-height: 80vh;
+        gap: 15px;
+        & .area-de-diferenciais{
+            gap: 10px;
+            & article{
+                & .btn{
+                    height: 66px;
+                }
+            }
+        }
+    }
+
+    & .secao-de-precos{
+        & .area-de-planos{
+            & article:nth-child(2){
+                order: 1;
+                & .area-recomendado{
+                    & p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    & .secao-de-servicos{
+        & .informacoes-gerais{
+            text-align: center;
+            margin-top: 10px;
+            & .introducao{
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                & h2{
+                    line-height: 70px;
+                    & span{
+                        display: block;
+                    }
+                }
+                & p{
+                    padding: 0 7%;
+                }
+           }
+            & .dados{
+                justify-content: center;
+                flex-wrap: wrap;
+                & article{
+                    & h3{
+                        width: 100%;
+                    }
+                    & p{
+                        text-align: center;
+                    }
+                    &:nth-child(3){
+                        & p{
+                            width: 110%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .secao-de-registro{
+        justify-content: center;
+        & .area-do-formulario{
+            text-align: center;
+            gap: 1rem;
+            & .formulario{
+                & div{
+                    & input{
+                        margin: auto 20px 40px;
+                    }
+                }
+                & input{
+                    &#submit{
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:747px){
+    .secao-de-precos .area-de-planos article:nth-child(2){
+        order: 0;
+    }
+}
+
+@media(max-width:425px){
+    html{
+        font-size: 62.5%;
+    }
+
+    & .secao-de-precos{
+        & .area-de-planos{
+            & article{
+                width: 280px;
+            }
+        }
+    }
+
+    main{
+        & .secao-inicial{
+            & .area-de-introducao{
+                & h1{
+                    font-size: 6rem;
+                    & span{
+                        font-size: 4rem;
+                        white-space: nowrap;
+                    }
+                }
+                & p{
+                    width: 110%;
+                }
+            }
+        }
+    }
+
+    .secao-de-servicos{
+        & .informacoes-gerais{
+            & .introducao{
+                gap: 20px;
+            }
+            & .dados{
+                & article{
+                    &:nth-child(3){
+                        & p{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    h1, h2 *{
+        line-height: 7rem;
+    }
+}
